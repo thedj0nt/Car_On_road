@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/constants.dart';
-import 'package:internproj/get_started.dart';
-import 'package:internproj/home/home_screen.dart';
+import 'package:internproj/screens/get_started.dart';
+import 'package:internproj/screens/home/home_screen.dart';
+import 'package:internproj/screens/home/profile_screen_contents.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +20,7 @@ class ProfilePage extends StatelessWidget {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        actions: [
-          // IconButton(
-          //   onPressed: () {},
-          //   icon: Icon(
-          //     Icons.settings_outlined,
-          //   ),
-          // ),
-        ],
+        actions: [],
       ),
       body: Column(
         children: [
@@ -102,116 +94,12 @@ class ProfilePage extends StatelessWidget {
             height: 1,
             width: double.infinity,
             color: textTwo,
-          ),         
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: Row(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.fromLTRB(40, 0, 10, 0),
-                    child: Icon(
-                      Icons.account_circle,
-                      size: 24,
-                      color: textTwo,
-                    ),),
-                Container(
-                    child: Text(
-                  'Profile',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: textTwo),
-                ),),
-              ],
-            ),
           ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: Row(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.fromLTRB(40, 0, 10, 0),
-                    child: Icon(
-                      Icons.notifications,
-                      size: 24,
-                      color: textTwo,
-                    )),
-                Container(
-                    child: Text(
-                  'Notification',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: textTwo),
-                )),
-                Container(
-                  margin: EdgeInsets.fromLTRB(145, 0, 40, 0),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        height: 20,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              color: textColor,
-                            ),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 20,
-                        child: Text(
-                          '0',
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w900,
-                              fontSize: 14,
-                              color: textColor),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          
-          
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: Row(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.fromLTRB(40, 0, 10, 0),
-                    child: Icon(
-                      Icons.favorite,
-                      size: 24,
-                      color: textTwo,
-                    )),
-                Container(
-                    child: Text(
-                  'Favorites',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: textTwo),
-                )),
-              ],
-            ),
-          ),
-          SizeBox(
+          profile(),
+          notification(),
+          favorites(),
+          SizedBox(
             height: 200,
-
           ),
           new GestureDetector(
             onTap: () {

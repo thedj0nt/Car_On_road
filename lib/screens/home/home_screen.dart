@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:internproj/home/available_cars_list_view.dart';
 import 'package:internproj/constants.dart';
-import 'package:internproj/home/profile_screen.dart';
-import 'package:internproj/sign_up_screen.dart';
+
+import 'package:internproj/screens/authentication_screens/sign_up_screen.dart';
+import 'package:internproj/screens/home/available_cars_list_view.dart';
+import 'package:internproj/screens/home/profile_screen.dart';
 
 import 'brands_list_view.dart';
 
@@ -80,8 +81,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 teslaCard(),
                 audiCard(),
                 porscheCard(),
-                tataCard(),
                 benzCard(),
+                tataCard(),
               ],
             ),
           ),
@@ -100,8 +101,9 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: SizedBox(
               height: 400.0,
+              width: MediaQuery.of(context).size.width,
               child: Container(
-                //color: Colors.amber,
+                // color: Colors.amber,
                 margin: const EdgeInsets.symmetric(vertical: 10.0),
                 height: MediaQuery.of(context).size.height * 0.47,
                 child: ListView(
@@ -110,8 +112,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     teslaModelS(),
                     Audietron(),
                     porschetaycan(),
-                    tataNexon(),
                     mercedesEcq(),
+                    tataNexon(),
                   ],
                 ),
               ),

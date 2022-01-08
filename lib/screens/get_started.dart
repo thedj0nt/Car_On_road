@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/constants.dart';
-import 'package:internproj/sign_up_screen.dart';
+import 'package:internproj/screens/authentication_screens/sign_up_screen.dart';
 
 class Getstarted extends StatelessWidget {
   var child;

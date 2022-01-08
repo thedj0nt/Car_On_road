@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/constants.dart';
+import 'package:internproj/screens/home/etron_info.dart';
+import 'package:internproj/screens/home/teslax_info.dart';
 
 class teslaModelS extends StatelessWidget {
   const teslaModelS({
@@ -93,17 +95,25 @@ class teslaModelS extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(10, 170, 0, 10),
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                  color: primaryColor.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(10)),
-              child: Icon(
-                Icons.arrow_forward_sharp,
-                color: primaryColor,
+            GestureDetector(
+              child: Container(
+                margin: EdgeInsets.fromLTRB(10, 170, 0, 10),
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                    color: primaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Icon(
+                  Icons.arrow_forward_sharp,
+                  color: primaryColor,
+                ),
               ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TeslaxInfo()),
+                );
+              },
             ),
           ],
         ),
@@ -173,9 +183,9 @@ class Audietron extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  alignment: Alignment.bottomLeft,
+                  alignment: Alignment.centerLeft,
                   margin: EdgeInsets.fromLTRB(20, 170, 0, 0),
-                  height: 20,
+                  height: 26,
                   width: 300,
                   child: Text(
                     'E-Tron Sportback',
@@ -202,17 +212,25 @@ class Audietron extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(10, 170, 0, 10),
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                  color: primaryColor.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(10)),
-              child: Icon(
-                Icons.arrow_forward_sharp,
-                color: primaryColor,
+            GestureDetector(
+              child: Container(
+                margin: EdgeInsets.fromLTRB(10, 170, 0, 10),
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                    color: primaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Icon(
+                  Icons.arrow_forward_sharp,
+                  color: primaryColor,
+                ),
               ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EtronInfo()),
+                );
+              },
             ),
           ],
         ),

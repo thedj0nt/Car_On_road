@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:internproj/home/home_screen.dart';
-import 'package:internproj/sign_up_screen.dart';
 import 'package:internproj/constants.dart';
+import 'package:internproj/screens/authentication_screens/sign_in_screen.dart';
+import 'package:internproj/screens/home/home_screen.dart';
 
-class SignIn extends StatefulWidget {
+class SignupPage extends StatefulWidget {
   @override
-  _SigninState createState() => _SigninState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _SigninState extends State<SignIn> {
+class _SignupPageState extends State<SignupPage> {
+  final _formkey = GlobalKey<FormState>();
   // state of text field
   String email = '';
   String password = '';
+  String username = '';
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -30,7 +33,7 @@ class _SigninState extends State<SignIn> {
             height: 120,
             width: double.infinity,
             child: Text(
-              'Sign In',
+              'Sign Up',
               style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w100,
@@ -73,7 +76,7 @@ class _SigninState extends State<SignIn> {
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
                   child: Text(
-                    'Login with account to continue',
+                    'Create account to continue',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.w800,
@@ -84,9 +87,9 @@ class _SigninState extends State<SignIn> {
                 ),
                 Center(
                   child: Form(
+                    key: _formkey,
                     child: Column(
                       children: <Widget>[
-                        // margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                         SizedBox(
                           height: 20.0,
                         ),
@@ -151,18 +154,17 @@ class _SigninState extends State<SignIn> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(25.0),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: primaryColor.withOpacity(0.2),
-                        spreadRadius: 6,
-                        blurRadius: 20,
-                        offset: Offset(0, 10),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(25.0),
                       ),
-                    ],
-                  ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: primaryColor.withOpacity(0.2),
+                          spreadRadius: 6,
+                          blurRadius: 20,
+                          offset: Offset(0, 10),
+                        )
+                      ]),
 
                   width: 300,
                   height: 60,
@@ -172,8 +174,11 @@ class _SigninState extends State<SignIn> {
                   // width: 800,
                   child: ElevatedButton(
                     onPressed: () async {
-                      //print(email);
-                      //print(password);
+                      if (_formkey.currentState!.validate()) {
+                        print(email);
+                        print(password);
+                      }
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -187,7 +192,7 @@ class _SigninState extends State<SignIn> {
                             borderRadius: BorderRadius.circular(50),
                             side: BorderSide(color: primaryColor))),
                     child: Text(
-                      'LOGIN',
+                      'CREATE',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 18,
@@ -197,17 +202,17 @@ class _SigninState extends State<SignIn> {
                 ),
                 InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => SignupPage()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignIn()),
+                    );
                   },
                   child: Row(
                     children: [
                       Container(
                         padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
                         child: Text(
-                          "Don't have an account?",
+                          'Already have an account?',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w900,
@@ -218,7 +223,7 @@ class _SigninState extends State<SignIn> {
                       Container(
                         padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
                         child: Text(
-                          'Sign Up',
+                          'Sign in',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w900,

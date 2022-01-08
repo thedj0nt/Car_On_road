@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:internproj/available_cars_list_view.dart';
+import 'package:internproj/home/available_cars_list_view.dart';
 import 'package:internproj/constants.dart';
-import 'package:internproj/profile_screen.dart';
+import 'package:internproj/home/profile_screen.dart';
 import 'package:internproj/sign_up_screen.dart';
 
 import 'brands_list_view.dart';
@@ -97,19 +97,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: textColor),
             ),
           ),
-          Container(
-            //color: Colors.amber,
-            margin: const EdgeInsets.symmetric(vertical: 10.0),
-            height: MediaQuery.of(context).size.height * 0.47,
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                teslaModelS(),
-                Audietron(),
-                porschetaycan(),
-                tataNexon(),
-                mercedesEcq(),
-              ],
+          Expanded(
+            child: SizedBox(
+              height: 400.0,
+              child: Container(
+                //color: Colors.amber,
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                height: MediaQuery.of(context).size.height * 0.47,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: <Widget>[
+                    teslaModelS(),
+                    Audietron(),
+                    porschetaycan(),
+                    tataNexon(),
+                    mercedesEcq(),
+                  ],
+                ),
+              ),
             ),
           ),
         ],

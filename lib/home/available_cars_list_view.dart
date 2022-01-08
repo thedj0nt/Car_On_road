@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import 'package:internproj/constants.dart';
 
 class teslaModelS extends StatelessWidget {
   const teslaModelS({

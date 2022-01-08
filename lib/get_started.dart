@@ -62,59 +62,59 @@ class Getstarted extends StatelessWidget {
                     color: textLight,
                   )),
             ),
-            Container(
-              height: 40,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 10,
-                    width: 10,
-                    margin: EdgeInsets.all(6),
-                    decoration: new BoxDecoration(
-                      color: Colors.grey.shade200,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    margin: EdgeInsets.all(6),
-                    decoration: new BoxDecoration(
-                      color: Colors.grey.shade200,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    margin: EdgeInsets.all(6),
-                    decoration: new BoxDecoration(
-                      color: Colors.grey.shade200,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    margin: EdgeInsets.all(6),
-                    decoration: new BoxDecoration(
-                      color: Colors.grey.shade200,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    margin: EdgeInsets.all(6),
-                    decoration: new BoxDecoration(
-                      color: Colors.grey.shade200,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   height: 40,
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: [
+            //       Container(
+            //         height: 10,
+            //         width: 10,
+            //         margin: EdgeInsets.all(6),
+            //         decoration: new BoxDecoration(
+            //           color: Colors.grey.shade200,
+            //           shape: BoxShape.circle,
+            //         ),
+            //       ),
+            //       Container(
+            //         height: 10,
+            //         width: 10,
+            //         margin: EdgeInsets.all(6),
+            //         decoration: new BoxDecoration(
+            //           color: Colors.grey.shade200,
+            //           shape: BoxShape.circle,
+            //         ),
+            //       ),
+            //       Container(
+            //         height: 10,
+            //         width: 10,
+            //         margin: EdgeInsets.all(6),
+            //         decoration: new BoxDecoration(
+            //           color: Colors.grey.shade200,
+            //           shape: BoxShape.circle,
+            //         ),
+            //       ),
+            //       Container(
+            //         height: 10,
+            //         width: 10,
+            //         margin: EdgeInsets.all(6),
+            //         decoration: new BoxDecoration(
+            //           color: Colors.grey.shade200,
+            //           shape: BoxShape.circle,
+            //         ),
+            //       ),
+            //       Container(
+            //         height: 10,
+            //         width: 10,
+            //         margin: EdgeInsets.all(6),
+            //         decoration: new BoxDecoration(
+            //           color: Colors.grey.shade200,
+            //           shape: BoxShape.circle,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             Container(
               //color: Colors.amber,
               decoration: BoxDecoration(

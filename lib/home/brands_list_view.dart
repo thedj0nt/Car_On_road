@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'constants.dart';
+import 'package:internproj/constants.dart';
 
 class teslaCard extends StatelessWidget {
   const teslaCard({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/constants.dart';
 import 'package:internproj/get_started.dart';
-import 'package:internproj/home_screen.dart';
+import 'package:internproj/home/home_screen.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -102,63 +102,7 @@ class ProfilePage extends StatelessWidget {
             height: 1,
             width: double.infinity,
             color: textTwo,
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: Row(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.fromLTRB(40, 0, 10, 0),
-                    child: Icon(
-                      Icons.home,
-                      size: 24,
-                      color: textColor,
-                    )),
-                Container(
-                    child: Text(
-                  'Home',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: textColor),
-                )),
-                Container(
-                  margin: EdgeInsets.fromLTRB(200, 0, 40, 0),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        height: 20,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              color: textColor,
-                            ),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 20,
-                        child: Text(
-                          '35',
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w900,
-                              fontSize: 14,
-                              color: textColor),
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
+          ),         
           Container(
             margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
             child: Row(
@@ -170,7 +114,7 @@ class ProfilePage extends StatelessWidget {
                       Icons.account_circle,
                       size: 24,
                       color: textTwo,
-                    )),
+                    ),),
                 Container(
                     child: Text(
                   'Profile',
@@ -179,7 +123,7 @@ class ProfilePage extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                       color: textTwo),
-                )),
+                ),),
               ],
             ),
           ),
@@ -225,7 +169,7 @@ class ProfilePage extends StatelessWidget {
                         height: 20,
                         width: 20,
                         child: Text(
-                          '12',
+                          '0',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w900,
@@ -239,86 +183,8 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: Row(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.fromLTRB(40, 0, 10, 0),
-                    child: Icon(
-                      Icons.people,
-                      size: 24,
-                      color: textTwo,
-                    )),
-                Container(
-                    child: Text(
-                  'Friends',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: textTwo),
-                )),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: Row(
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.fromLTRB(40, 0, 10, 0),
-                    child: Icon(
-                      Icons.mail,
-                      size: 24,
-                      color: textTwo,
-                    )),
-                Container(
-                    child: Text(
-                  'Message',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: textTwo),
-                )),
-                Container(
-                  margin: EdgeInsets.fromLTRB(175, 0, 40, 0),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        height: 20,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              color: textColor,
-                            ),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 30,
-                        child: Text(
-                          '143',
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w900,
-                              fontSize: 14,
-                              color: textColor),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          
+          
           Container(
             margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
             child: Row(
@@ -342,6 +208,10 @@ class ProfilePage extends StatelessWidget {
                 )),
               ],
             ),
+          ),
+          SizeBox(
+            height: 200,
+
           ),
           new GestureDetector(
             onTap: () {

@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:internproj/home/home_screen.dart';
-import 'package:internproj/sign_in_screen.dart';
+import 'package:internproj/sign_up_screen.dart';
 import 'package:internproj/constants.dart';
 
-class SignupPage extends StatefulWidget {
+class SignIn extends StatefulWidget {
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  _SigninState createState() => _SigninState();
 }
 
-class _SignupPageState extends State<SignupPage> {
-  final _formkey = GlobalKey<FormState>();
+class _SigninState extends State<SignIn> {
   // state of text field
   String email = '';
   String password = '';
-  String username = '';
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -33,7 +30,7 @@ class _SignupPageState extends State<SignupPage> {
             height: 120,
             width: double.infinity,
             child: Text(
-              'Sign Up',
+              'Sign In',
               style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w100,
@@ -76,7 +73,7 @@ class _SignupPageState extends State<SignupPage> {
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
                   child: Text(
-                    'Create account to continue',
+                    'Login with account to continue',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.w800,
@@ -87,36 +84,9 @@ class _SignupPageState extends State<SignupPage> {
                 ),
                 Center(
                   child: Form(
-                    key: _formkey,
                     child: Column(
                       children: <Widget>[
                         // margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                        // SizedBox(
-                        //   height: 20.0,
-                        // ),
-                        // Padding(
-                        //   padding: EdgeInsets.fromLTRB(60, 0, 60, 0),
-                        //   child: TextField(
-                        //     decoration: InputDecoration(
-                        //       enabledBorder: UnderlineInputBorder(
-                        //         borderSide: BorderSide(color: textColor),
-                        //       ),
-                        //       focusedBorder: UnderlineInputBorder(
-                        //         borderSide: BorderSide(color: primaryColor),
-                        //       ),
-                        //       labelText: 'Username',
-                        //       labelStyle: TextStyle(
-                        //         fontFamily: 'Montserrat',
-                        //         color: textTwo,
-                        //         fontSize: 16,
-                        //         fontWeight: FontWeight.bold,
-                        //       ),
-                        //     ),
-                        //     onChanged: (val) {
-                        //       setState(() => username = val);
-                        //     },
-                        //   ),
-                        // ),
                         SizedBox(
                           height: 20.0,
                         ),
@@ -181,17 +151,18 @@ class _SignupPageState extends State<SignupPage> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(25.0),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(25.0),
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: primaryColor.withOpacity(0.2),
+                        spreadRadius: 6,
+                        blurRadius: 20,
+                        offset: Offset(0, 10),
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: primaryColor.withOpacity(0.2),
-                          spreadRadius: 6,
-                          blurRadius: 20,
-                          offset: Offset(0, 10),
-                        )
-                      ]),
+                    ],
+                  ),
 
                   width: 300,
                   height: 60,
@@ -201,11 +172,8 @@ class _SignupPageState extends State<SignupPage> {
                   // width: 800,
                   child: ElevatedButton(
                     onPressed: () async {
-                      if (_formkey.currentState!.validate()) {
-                        print(email);
-                        print(password);
-                      }
-
+                      //print(email);
+                      //print(password);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -219,7 +187,7 @@ class _SignupPageState extends State<SignupPage> {
                             borderRadius: BorderRadius.circular(50),
                             side: BorderSide(color: primaryColor))),
                     child: Text(
-                      'CREATE',
+                      'LOGIN',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 18,
@@ -229,17 +197,17 @@ class _SignupPageState extends State<SignupPage> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignIn()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SignupPage()),
+                    // );
                   },
                   child: Row(
                     children: [
                       Container(
                         padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
                         child: Text(
-                          'Already have an account?',
+                          "Don't have an account?",
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w900,
@@ -250,7 +218,7 @@ class _SignupPageState extends State<SignupPage> {
                       Container(
                         padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
                         child: Text(
-                          'Sign in',
+                          'Sign Up',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w900,

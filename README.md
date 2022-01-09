@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-SETUP INFO: 
+## SETUP INFO: 
 Hardware Requirements
 • CPU: Intel i5 8th gen and above
 • RAM: 8 GB

@@ -15,6 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+SETUP INFO: 
 Hardware Requirements
 • CPU: Intel i5 8th gen and above
 • RAM: 8 GB
@@ -29,5 +30,5 @@ Steps for installation and execution
 1. Install Flutter from https://docs.flutter.dev/get-started/install.
 2. Download and extract the project files to the directory/folder where flutter is installed. 
 3. Open VS code, click on File -> Open folder -> select the project folder.
-4. (if you want to run project on emulator) Open android studio,  click on setting or configure -> AVD Manager -> select device (android version 29 and above) -> click the green start button -> emulator will boot. 
-5. Open terminal (tool bar in VS code) or ctrl + shift + `to open terminal and then type 'flutter run', select any option you want it to run the project on i.e Chrome/Edge/FireFox browser or emulator. 
+4. (if you want to run project on emulator) Open android studio, click on settings or configure -> AVD Manager -> select device (android version 29 and above) -> click the green start button -> emulator will boot. 
+5. Open terminal (tool bar in VS code) or ctrl + shift + `to open terminal and then type 'flutter run', select any option you want it to run the project on i.e., Chrome/Edge/FireFox browser or emulator.
